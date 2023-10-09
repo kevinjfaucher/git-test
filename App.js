@@ -1,42 +1,25 @@
-// Start by importing necessary components
 import React from 'react';
 import { StyleSheet, View, FlatList, Text } from 'react-native';
 
 export default class SimpleFlatListApp extends React.Component {
-
-  // Define the data for our list
-  data = [
-    'Apple',
-    'Banana',
-    'Cherry',
-    'Date',
-    'Fig',
-    'Grape',
-    'Honeydew',
-  ];
-
-  // Define how each item in the list should be rendered
-  renderItem = ({ item }) => (
-      <Text style={styles.itemText}>
-        {item}
-      </Text>
-  );
-
   render() {
+    // Inline data for the list
+    const data = ['Apple', 'Banana', 'Cherry', 'Date', 'Fig', 'Grape', 'Honeydew'];
+
     return (
         <View style={styles.container}>
-          {/* This is the FlatList component which displays the list of items */}
           <FlatList
-              data={this.data}                   // Provide the data that should be displayed
-              renderItem={this.renderItem}       // Specify how to render each item
-              keyExtractor={(item) => item}      // Specify a unique key for each item
+              data={data}
+              // Inline renderItem function to specify how to display each item
+              renderItem={({ item }) => <Text style={styles.itemText}>{item}</Text>}
+              // Providing a unique key for each item
+              keyExtractor={(item) => item}
           />
         </View>
     );
   }
 }
 
-// Define styles for our components
 const styles = StyleSheet.create({
   container: {
     flex: 1,
