@@ -3,7 +3,7 @@ import { StyleSheet, View, FlatList, Text } from 'react-native';
 
 export default class SimpleFlatListApp extends React.Component {
   render() {
-    // Inline data for the list
+    // Inline data for the list.
     const data = ['Apple', 'Banana', 'Cherry', 'Date', 'Fig', 'Grape', 'Honeydew'];
 
     return (
