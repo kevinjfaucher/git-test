@@ -4,6 +4,7 @@ import { StyleSheet, View, FlatList, Text } from 'react-native';
 export default class SimpleFlatListApp extends React.Component {
   render() {
     // Inline data for the list.
+    // This is a test line!!!!!!!!!!!
     const data = ['Apple', 'Banana', 'Cherry', 'Date', 'Fig', 'Grape', 'Honeydew'];
 
     return (
